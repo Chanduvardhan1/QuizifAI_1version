@@ -211,7 +211,7 @@ export default function quiztype() {
   const fetchCategories = async () => {
     try {
       const response = await fetch(
-        "https://dev.quizifai.com:8010/categories&sub_categories/"
+        "https://quizifai.com:8010/categories&sub_categories/"
       );
       const data = await response.json();
       if (data.response === "success") {
@@ -249,7 +249,7 @@ export default function quiztype() {
 
   const fetchCourses = async () => {
     try {
-      const response = await fetch("https://dev.quizifai.com:8010/courses-clsses/");
+      const response = await fetch("https://quizifai.com:8010/courses-clsses/");
       const data = await response.json();
       
       if (data.response === "success") {
@@ -317,7 +317,7 @@ export default function quiztype() {
 
   const fetchComplexities = async () => {
     try {
-      const response = await fetch("https://dev.quizifai.com:8010/complexities/");
+      const response = await fetch("https://quizifai.com:8010/complexities/");
       const data = await response.json();
       if (data.response === "success") {
         setComplexities(
@@ -340,7 +340,7 @@ export default function quiztype() {
 
   // const fetchData = async () => {
   //   try {
-  //     const response = await fetch("https://dev.quizifai.com:8010/complexities/", {
+  //     const response = await fetch("https://quizifai.com:8010/complexities/", {
   //       method: "GET",
   //       headers: {
   //         accept: "application/json",
@@ -359,7 +359,7 @@ export default function quiztype() {
 
   // useEffect(() => {
   //   // Fetch categories
-  //   fetch("https://dev.quizifai.com:8010/categories/", {
+  //   fetch("https://quizifai.com:8010/categories/", {
   //     method: "GET",
   //     headers: {
   //       Accept: "application/json",
@@ -389,7 +389,7 @@ export default function quiztype() {
   // useEffect(() => {
   //   if (quizCategory !== "") {
   //     // Fetch subcategories based on selected category
-  //     fetch("https://dev.quizifai.com:8010/get_categories/", {
+  //     fetch("https://quizifai.com:8010/get_categories/", {
   //       method: "POST",
   //       headers: {
   //         Accept: "application/json",
@@ -430,7 +430,7 @@ export default function quiztype() {
 
   // useEffect(() => {
   //   // Fetch courses
-  //   fetch("https://dev.quizifai.com:8010/courses/")
+  //   fetch("https://quizifai.com:8010/courses/")
   //     .then((response) => {
   //       if (!response.ok) {
   //         throw new Error("Failed to fetch courses");
@@ -452,7 +452,7 @@ export default function quiztype() {
   // useEffect(() => {
   //   // Fetch classes based on selected course name
   //   if (coursename !== "") {
-  //     fetch("https://dev.quizifai.com:8010/get_class_name/", {
+  //     fetch("https://quizifai.com:8010/get_class_name/", {
   //       method: "POST",
   //       headers: {
   //         Accept: "application/json",
@@ -559,7 +559,7 @@ export default function quiztype() {
   //     formData.append("file", uploadedFile); // Assuming you have a ref for file input
 
   //     const response = await fetch(
-  //       "https://dev.quizifai.com:8010/Upload quiz with PDF...../",
+  //       "https://quizifai.com:8010/Upload quiz with PDF...../",
   //       {
   //         method: "POST",
   //         body: formData,
@@ -690,7 +690,7 @@ if (isAnyFieldEmpty) {
       };
   
       const responseText = await uploadFileWithSimulatedProgress(
-        "https://dev.quizifai.com:8010/Upload quiz with PDF...../",
+        "https://quizifai.com:8010/Upload quiz with PDF...../",
         options
       );
   
@@ -732,7 +732,7 @@ if (isAnyFieldEmpty) {
       }
   
       const response = await fetch(
-        `https://dev.quizifai.com:8010/crt_qz_from_pdf`,
+        `https://quizifai.com:8010/crt_qz_from_pdf`,
         {
           method: "POST",
           headers: {
