@@ -75,27 +75,27 @@ const Quiz = () => {
     const fetchDropdownValues = async () => {
       try {
         // Fetch date range and popularity
-        const dateRangeResponse = await fetch('https://dev.quizifai.com:8010/get_date_rnge/');
+        const dateRangeResponse = await fetch('https://quizifai.com:8010/get_date_rnge/');
         const dateRangeResult = await dateRangeResponse.json();
         console.log("Date Range and Popularity data:", dateRangeResult);
         setDateRanges(sortAlphabetically(dateRangeResult["Date Range"]));
         setPopularity(sortAlphabetically(dateRangeResult["Popularity"]));
 
         // Fetch categories and subcategories
-        const categoriesResponse = await fetch('https://dev.quizifai.com:8010/categories&sub_categories/');
+        const categoriesResponse = await fetch('https://quizifai.com:8010/categories&sub_categories/');
         const categoriesResult = await categoriesResponse.json();
         console.log("Categories and Subcategories data:", categoriesResult);
         setCategories(sortAlphabetically(categoriesResult.data.map(item => item.category_name)));
         setAllSubCategories(categoriesResult.data);
 
         // Fetch complexities
-        const complexitiesResponse = await fetch('https://dev.quizifai.com:8010/complexities/');
+        const complexitiesResponse = await fetch('https://quizifai.com:8010/complexities/');
         const complexitiesResult = await complexitiesResponse.json();
         console.log("Complexities data:", complexitiesResult);
         setComplexities(complexitiesResult.data.map(item => item.complexity_name));
 
         // Fetch courses and classes
-        const coursesResponse = await fetch('https://dev.quizifai.com:8010/courses-clsses/');
+        const coursesResponse = await fetch('https://quizifai.com:8010/courses-clsses/');
         const coursesResult = await coursesResponse.json();
         console.log("Courses and Classes data:", coursesResult);
         setCourses(sortAlphabetically(coursesResult.data.map(item => item.course_name)));
@@ -113,7 +113,7 @@ const Quiz = () => {
     const fetchQuizData = async () => {
       console.log("User ID:", userId);
       try {
-        const response = await fetch(`https://dev.quizifai.com:8010/dashboard`, {
+        const response = await fetch(`https://quizifai.com:8010/dashboard`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
