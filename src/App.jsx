@@ -28,7 +28,8 @@ import QuizAccess from "./quizaccess/quizAccess.jsx";
 import Register from "./register/register.jsx";
 
 // import History from "./history/history.jsx"
-import Createquiz from "./create-quiz/create-quiz.jsx"
+import Createquiz from "./createquizs/create-quiz.jsx"
+
 import Csv from "./csv/csv.jsx"
 // import Detailedreport from "./detailed-report/detailed-report.jsx"
 // import Enterquiz from "./enter-quiz/enter-quiz.jsx"
@@ -281,7 +282,7 @@ import PrivateRoute from './privateRoute/privateRoute.jsx';
 
 
             <Route path="history" element={<History />} />
-            <Route path="create-quiz" element={<Createquiz />} />
+            <Route path="createquiz" element={<Createquiz />} />
             <Route path="csv" element={<Csv />} />
             {/* <Route path="detailed-report" element={<Detailedreport />} /> */}
             {/* <Route path="enter-quiz" element={<Enterquiz />} /> */}

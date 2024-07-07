@@ -357,7 +357,7 @@ const Dashboard = () => {
               alt="Plus Icon"
             />
             <a
-              href="./create-quiz"
+              href="./createquiz"
               className="hover:underline underline-offset-2 cursor-pointer font-Poppins font-medium text-[12px] leading-[18px] text-[#214082] ml-2 mt-3"
             >
               Quiz
